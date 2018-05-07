@@ -1,0 +1,42 @@
+<h1>Signup!</h1>
+<%= form_tag '/drivers', method: :post do  %>
+  <div>
+   First Name: <input type="text" name="first_name">
+  </div>
+  <div>
+   Last Name: <input type="text" name="last_name">
+  </div>
+  <div>
+   Phone Number: <input type="text" name="phone_number">
+  </div>
+  <div>
+   Street Address 1: <input type="text" name="street_address_1">
+  </div>
+  <div>
+   Street Address 2: <input type="text" name="street_address_2">
+  </div>
+  <div>
+   City: <input type="text" name="city">
+  </div>
+  <div>
+   State: <input type="text" name="state">
+  </div>
+  <div>
+   Zip Code: <input type="text" name="zip_code">
+  </div>
+  <div>
+   License Plate Number: <input type="text" name="license_plate_number">
+  </div>
+
+  <div>
+   Email: <input type="email" name="email">
+  </div>
+  <div>
+   Password: <input type="password" name="password">
+  </div>
+  <div>
+   Confirm Password: <input type="password" name="password_confirmation">
+  </div>
+  <input type="submit" value="Submit">
+<% end %>
+
