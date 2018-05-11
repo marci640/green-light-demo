@@ -23,4 +23,10 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def show
+    @business = Business.find(params[:id]) 
+    @ad = @business.ad
+    render "show.html.erb"
+  end
+
 end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business_id: 1
+  image: MyString
+  availability: 1
+  duration: MyString
+  zip_code: MyString
+  radius: MyString
+
+two:
+  business_id: 1
+  image: MyString
+  availability: 1
+  duration: MyString
+  zip_code: MyString
+  radius: MyString

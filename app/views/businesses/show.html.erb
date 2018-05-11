@@ -1,0 +1,45 @@
+<head> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> </head>
+
+<div class="row top-buffer"> </div>
+<div class="row">
+  <div class="col-8 col-md-6">
+    <img src=<%=@ad.image%> > 
+    <div class="business-card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"> Current Ad </h3>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Ads Remaining: <%=@ad.availability%> </li>
+        <li class="list-group-item"> Duration: <%=@ad.duration%> </li>
+        <li class="list-group-item"> Distance: Within <%=@ad.radius%> of <%=@ad.zip_code%> </li>
+      </ul>
+      <div class="card-body">
+        <div class="text-center"
+          <a href="#"> <button type="button" class="btn btn-warning">Edit</button> </a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-8 col-md-6">
+    <div class="business-card" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"> Company Details </h3>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Company Name: <%=@business.business_name %> </li>
+        <li class="list-group-item"> Contact Person: <%= @business.contact_name %> </li>
+        <li class="list-group-item"> Email: <%= @business.email %> </li>
+        <li class="list-group-item"> Password: ******* </li>
+        <li class="list-group-item"> Current Payment Method: <i class="fab fa-cc-visa"></i>
+
+ </li>
+      </ul>
+      <div class="card-body">
+        <div class="text-center"
+          <a href="#"> <button type="button" class="btn btn-warning">Edit</button> </a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
