@@ -32,4 +32,10 @@ class DriversController < ApplicationController
     end
   end
 
+  def show
+    @driver = Driver.find(params[:id]) 
+    @car = @driver.car
+    render "show.html.erb"
+  end
+
 end

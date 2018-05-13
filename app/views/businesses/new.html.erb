@@ -1,23 +1,26 @@
 <h1>Signup!</h1>
 <%= form_tag '/businesses', method: :post do  %>
- <div>
+  <div>
    Business Name: <input type="text" name="business_name">
- </div>
- <div>
-   Contact Name: <input type="text" name="contact_name">
- </div>
- <div>
+  </div>
+  <div>
+   Contact First Name: <input type="text" name="first_name">
+  </div>
+  <div>
+   Contact Last Name: <input type="text" name="last_name">
+  </div>
+  <div>
    Website URL: <input type="text" name="website_url">
- </div>
- <div>
+  </div>
+  <div>
    Email: <input type="email" name="email">
- </div>
- <div>
+  </div>
+  <div>
    Password: <input type="password" name="password">
- </div>
- <div>
+  </div>
+  <div>
    Confirm Password: <input type="password" name="password_confirmation">
- </div>
- <input type="submit" value="Submit">
+  </div>
+  <input type="submit" value="Submit">
 <% end %>
 

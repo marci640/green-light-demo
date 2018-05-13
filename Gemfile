@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
+gem 'faker'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

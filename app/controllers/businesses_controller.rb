@@ -7,7 +7,8 @@ class BusinessesController < ApplicationController
   def create
     business = Business.new(
       business_name: params[:business_name],
-      contact_name: params[:contact_name],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
       website_url: params[:website_url],
       email: params[:email],
       password: params[:password],
@@ -26,6 +27,7 @@ class BusinessesController < ApplicationController
   def show
     @business = Business.find(params[:id]) 
     @ad = @business.ad
+    @cars = @ad.cars
     render "show.html.erb"
   end
 
