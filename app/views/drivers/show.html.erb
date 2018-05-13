@@ -1,1 +1,51 @@
+<div class="row top-buffer"> </div>
 
+<div class="row">
+  <div class="col-12 col-md-6">
+    <img src=<%=@car.car_image%> alt="image of ad" class="img-thumbnail">
+
+    <div class="business-card" style="width: 25rem;">
+      <h5 class="card-title"> Car Details <a class="edit-link" href="www.google.com"> edit </a> </h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Make: <%=@car.make%> </li>
+        <li class="list-group-item"> Model: <%=@car.model%> </li>
+        <li class="list-group-item"> Year: <%=@car.year%> </li>
+        <li class="list-group-item"> Mileage: <%= number_with_delimiter(@car.mileage.floor, :precision => 0, :delimiter => ',') %> </li>
+      </ul>
+    </div>
+
+    <div class="business-card" style="width: 25rem;">
+      <h5 class="card-title"> Current Ad </h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Company Name: <%=@business.business_name %> </li>
+        <li class="list-group-item"> Duration: <%=@ad.duration%> </li>
+        <li class="list-group-item"> Distance: Within <%=@ad.radius%> of <%=@ad.zip_code%> </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-6">
+
+    <div class="business-card" style="width: 25rem;">
+      <h5 class="card-title"> Driver Details <a class="edit-link" href="www.google.com"> edit </a> </h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Name: <%= @driver.first_name + " " + @driver.last_name %> </li>
+        <li class="list-group-item"> Email: <%= @driver.email %> </li>
+        <li class="list-group-item"> Password: ******* </li>
+        <li class="list-group-item"> Phone Number: <%=@driver.phone_number %> </li>
+        <li class="list-group-item"> Street Address 1: <%= @driver.street_address_1 %> </li>
+        <li class="list-group-item"> Street Address 2: <%= @driver.street_address_2 %> </li>
+        <li class="list-group-item"> City: <%=@driver.city %> </li>
+        <li class="list-group-item"> State: <%=@driver.state %> </li>
+        <li class="list-group-item"> Zip Code: <%=@driver.zip_code%> </li>
+        <li class="list-group-item"> State: <%=@driver.state %> </li>
+        <li class="list-group-item"> License Plate Number: <%=@driver.license_plate_number %> </li>
+      </ul>
+    </div>
+
+    <img src=<%=@ad.image%> alt="image of ad" class="img-thumbnail">
+
+  </div>
+
+</div>

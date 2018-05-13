@@ -1,7 +1,4 @@
 class DriversController < ApplicationController
-  
-  def index
-  end 
 
   def new
     render 'new.html.erb'
@@ -35,6 +32,8 @@ class DriversController < ApplicationController
   def show
     @driver = Driver.find(params[:id]) 
     @car = @driver.car
+    @ad = @car.ad
+    @business = @ad.business
     render "show.html.erb"
   end
 

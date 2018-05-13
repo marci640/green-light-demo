@@ -1,5 +1,8 @@
 class BusinessesController < ApplicationController
 
+  def index
+  end 
+
   def new
     render 'new.html.erb'
   end
