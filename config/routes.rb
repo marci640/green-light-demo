@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   get "/" => "businesses#index"
   get "/businesses/:id" => "businesses#show"
-  get "businesses" => "businesses#index"
   get "/business_signup" => "businesses#new"
   post "/businesses" => "businesses#create"
   get "/business_login" => "business_sessions#new"

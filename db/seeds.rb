@@ -39,7 +39,10 @@ ad_array.each_with_index do |ad, index|
     business_id: index + 1,
     availability: 10,
     duration: "3 months",
-    zip_code: "94117",
+    city: "San Francisco",
+    state: "CA",
+    monthly_rate: "$80",
+    zip_code: "94109",
     radius: "5 miles"
   )
 end
