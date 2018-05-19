@@ -1,6 +1,9 @@
 // Place all the styles related to the Businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// dashboard
+
 .top-buffer { 
   margin-top:50px; 
 }
@@ -19,6 +22,14 @@
   margin-bottom: 18px;
 }
 
+// index
+
 .card {
-  width: 18rem; 
+  width: 25rem; 
+  margin-bottom: 40px; 
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
 }

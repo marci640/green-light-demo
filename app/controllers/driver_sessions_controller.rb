@@ -9,7 +9,7 @@ class DriverSessionsController < ApplicationController
     if driver && driver.authenticate(params[:password])
       session[:driver_id] = driver.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to '/'
+      redirect_to "/drivers/#{driver.id}"
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/driver_login'

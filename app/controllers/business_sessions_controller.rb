@@ -9,7 +9,8 @@ class BusinessSessionsController < ApplicationController
     if business && business.authenticate(params[:password])
       session[:business_id] = business.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to '/'
+      redirect_to "/businesses/#{business.id}"
+
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/business_login'
