@@ -1,0 +1,64 @@
+<h1>Edit your account!</h1>
+
+<h4> Driver Details: </h4>
+<%= form_tag "/drivers/#{@driver.id}", method: :patch do  %>
+  <div>
+    First Name: <input type="text" name="first_name" value="<%= @driver.first_name%> ">
+  </div>
+  <div>
+    Last Name: <input type="text" name="last_name" value=" <%= @driver.last_name %>">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="phone_number" value="<%= @driver.phone_number %>">
+  </div>
+  <div>
+    Street Address 1: <input type="text" name="street_address_1" value="<%= @driver.street_address_1 %>">
+  </div>
+  <div>
+    Street Address 2: <input type="text" name="street_address_2" value="<%= @driver.street_address_2 %>">
+  </div>
+  <div>
+    City: <input type="text" name="city" value="<%= @driver.city %>">
+  </div>
+  <div>
+    State: <input type="text" name="state" value="<%= @driver.state %>">
+  </div>
+  <div>
+    Zip Code: <input type="text" name="zip_code" value="<%= @driver.zip_code %>">
+  </div>
+
+  <h4> Car Details: </h4>
+  <div>
+   Make: <input type="text" name="make" value="<%= @car.make %>">
+  </div>
+  <div>
+   Model: <input type="text" name="model" value="<%= @car.model %>">
+  </div>
+  <div>
+   Year: <input type="text" name="year" value="<%= @car.year %>">
+  </div>
+  <div>
+   Mileage: <input type="text" name="mileage" value="<%= @car.mileage %>">
+  </div>
+  <div>
+   Car Image: <input type="text" name="car_image" value="<%= @car.car_image %>">
+  </div>
+  <div>
+   Odometer Image: <input type="text" name="odometer_image" value="<%= @car.odometer_image %>">
+  </div>
+  <div>
+   License Plate Number: <input type="text" name="license_plate_number" value="<%= @driver.license_plate_number %>">
+  </div>
+
+<h4> Account Details: </h4>
+  <div>
+    Email: <input type="email" name="email" value="<%= @driver.email %>">
+  </div>
+  <div>
+   Password: <input type="password" name="password" value="<%= @driver.password %>">
+  </div>
+  <div>
+   Confirm Password: <input type="password" name="password_confirmation" value="<%= @driver.password_confirmation %>">
+  </div>
+  <input type="submit" value="Submit">
+<% end %>

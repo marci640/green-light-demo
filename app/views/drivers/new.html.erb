@@ -1,4 +1,6 @@
 <h1>Signup!</h1>
+
+<h4> Driver Details </h4>
 <%= form_tag '/drivers', method: :post do  %>
   <div>
    First Name: <input type="text" name="first_name">
@@ -24,10 +26,31 @@
   <div>
    Zip Code: <input type="text" name="zip_code">
   </div>
+
+  <h4> Car Details: </h4>
+  <div>
+   Make: <input type="text" name="make">
+  </div>
+  <div>
+   Model: <input type="text" name="model">
+  </div>
+  <div>
+   Year: <input type="text" name="year">
+  </div>
+  <div>
+   Mileage: <input type="text" name="mileage">
+  </div>
+  <div>
+   Car Image: <input type="text" name="car_image">
+  </div>
+  <div>
+   Odometer Image: <input type="text" name="odometer_image">
+  </div>
   <div>
    License Plate Number: <input type="text" name="license_plate_number">
   </div>
-
+  
+  <h4> Account Info </h4>
   <div>
    Email: <input type="email" name="email">
   </div>

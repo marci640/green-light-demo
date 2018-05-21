@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post "/driver_login" => "driver_sessions#create"
   get "/driver_logout" => "driver_sessions#destroy"
   get "/drivers/:id" => "drivers#show"
+  get "/drivers/:id/edit" => "drivers#edit"
+  patch "/drivers/:id/" => "drivers#update"
 
   get "/" => "businesses#index"
   get "/businesses/:id" => "businesses#show"
@@ -15,4 +17,5 @@ Rails.application.routes.draw do
   post "/business_login" => "business_sessions#create"
   get "/business_logout" => "business_sessions#destroy"
 
+  get "/ads/:id" => "ads#show"
 end

@@ -2,10 +2,12 @@ class BusinessesController < ApplicationController
 
   def index
     @ad_array = []
-    @businesses = Business.all
-    @businesses.each do |business|
+    businesses = Business.all
+    businesses.each do |business|
       @ad_array.push(hash = { business: business.business_name, image: business.ad.image, monthly_rate: business.ad.monthly_rate})
     end
+    @current_driver = current_driver; 
+
   end 
 
   def new

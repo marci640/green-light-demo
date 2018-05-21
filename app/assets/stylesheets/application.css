@@ -58,4 +58,8 @@
      text-align: left;
    }
 
+  .top-buffer { 
+    margin-top:50px; 
+  }
+
  }
