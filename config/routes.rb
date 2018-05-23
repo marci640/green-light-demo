@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get "/business_logout" => "business_sessions#destroy"
 
   get "/ads/:id" => "ads#show"
+  patch "cars/:id" => "cars#update"
 end

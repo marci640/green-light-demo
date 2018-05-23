@@ -1,23 +1,5 @@
 <div class="row top-buffer"> </div>
 
-<h2> Review Details </h2>
-<div class="row">
-  <div class="col-12 col-md-6">
-    <img src=<%=@ad.image%> alt="image of ad" class="img-thumbnail">
-  </div>
-  <div class="col-12 col-md-6">
-    <div class="business-card">
-      <h5 class="card-title"> <% @business.business_name %> </h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Ads Remaining: <%=@ad.availability%> </li>
-        <li class="list-group-item"> Duration: <%=@ad.duration%> </li>
-        <li class="list-group-item"> Distance: Within <%=@ad.radius%> of <%=@ad.zip_code%> </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
 <h2>
   Review Terms and Conditions
 </h2>
@@ -107,3 +89,20 @@
   We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. 
 </p>    
 
+<h2> Review Details </h2>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <img src=<%=@ad.image%> alt="image of ad" class="img-thumbnail">
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="business-card">
+      <h5 class="card-title"> <% @business.business_name %> </h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Ads Remaining: <%=@ad.availability%> </li>
+        <li class="list-group-item"> Duration: <%=@ad.duration%> </li>
+        <li class="list-group-item"> Distance: Within <%=@ad.radius%> of <%=@ad.zip_code%> </li>
+        <%= button_to "submit", "/cars/#{@car.id}", class:"btn btn-default", style:"", method: :patch, remote: true, params: { ad_id: @ad.id} %>
+      </ul>
+    </div>
+  </div>
+</div>

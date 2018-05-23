@@ -70,6 +70,7 @@ class DriversController < ApplicationController
     )
     car.update(
       driver_id: driver.id,
+      ad_id: ad_id,
       make: params[:make],
       model: params[:model],
       year: params[:year],
