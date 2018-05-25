@@ -1,5 +1,19 @@
+<% if @product && @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved: </h2>
+
+    <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <%end%>
+    </ul>
+  </div>
+<%end%>
+
 <h1>Signup!</h1>
 <%= form_tag '/businesses', method: :post do  %>
+
+<h4> Business/Contact Details </h4>
   <div>
    Business Name: <input type="text" name="business_name">
   </div>
@@ -12,6 +26,34 @@
   <div>
    Website URL: <input type="text" name="website_url">
   </div>
+
+<h4> Ad Details </h4>
+  <div>
+   Image Upload: <input type="text" name="image">
+  </div>
+  <div>
+   Availability: <input type="text" name="availability">
+  </div>
+  <div>
+   Duration: <input type="text" name="duration">
+  </div>
+  <div>
+   City: <input type="text" name="city">
+  </div>
+  <div>
+   State: <input type="text" name="state">
+  </div>
+  <div>
+   Zip Code: <input type="text" name="zip_code">
+  </div>
+  <div>
+   Monthly Rate: <input type="text" name="monthly_rate">
+  </div>
+  <div>
+   Mile Radius: <input type="text" name="radius">
+  </div>
+
+<h4> Account Info </h4>
   <div>
    Email: <input type="email" name="email">
   </div>

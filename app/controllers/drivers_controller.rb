@@ -19,8 +19,9 @@ class DriversController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
-    car = Car.new(
+    driver.car = Car.new(
       driver_id: driver.id,
+      ad_id: 5,
       make: params[:make],
       model: params[:model],
       year: params[:year],
@@ -28,13 +29,13 @@ class DriversController < ApplicationController
       car_image: params[:car_image],
       odometer_image: params[:odometer_image]
     )
-    if driver.save && car.save
+    if driver.save && driver.car.save
       session[:driver_id] = driver.id
       flash[:success] = 'Successfully created account!'
-      redirect_to '/drivers'
+      redirect_to "/drivers/#{driver.id}"
     else
       flash[:warning] = 'Invalid email or password!'
-      redirect_to '/signup'
+      redirect_to '/driver_signup'
     end
   end
 

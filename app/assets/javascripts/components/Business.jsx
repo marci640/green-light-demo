@@ -20,7 +20,7 @@ class Business extends React.Component {
                   <div className="card-body">
                     <h5 className="card-title">{ad.business}</h5>
                     <p className="card-text">{ad.monthly_rate} per month </p>
-                   { this.state.current_driver && <a href={`/drivers/${this.state.current_driver.id}`} className="btn btn-primary">Select Ad</a> } 
+                   { this.state.current_driver && <a href={`/ads/${ad.id}`} className="btn btn-primary">Select Ad</a> } 
                   </div>
                 </div>
               </div>
