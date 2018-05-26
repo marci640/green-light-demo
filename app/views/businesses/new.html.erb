@@ -1,68 +1,102 @@
-<% if @product && @product.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved: </h2>
+<body class="form-page">
+  <div class="row top-buffer"> </div>
 
-    <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <%end%>
-    </ul>
-  </div>
-<%end%>
+  <%= form_tag '/businesses', method: :post do  %>
 
-<h1>Signup!</h1>
-<%= form_tag '/businesses', method: :post do  %>
+    <div class="form-container">
+      <div class="col-lg-8 col-sm-12">
+        <form>
 
-<h4> Business/Contact Details </h4>
-  <div>
-   Business Name: <input type="text" name="business_name">
-  </div>
-  <div>
-   Contact First Name: <input type="text" name="first_name">
-  </div>
-  <div>
-   Contact Last Name: <input type="text" name="last_name">
-  </div>
-  <div>
-   Website URL: <input type="text" name="website_url">
-  </div>
+          <legend class="form-header">Business & Contact Info </legend>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="business_name" placeholder="Business Name">
+          </div>
 
-<h4> Ad Details </h4>
-  <div>
-   Image Upload: <input type="text" name="image">
-  </div>
-  <div>
-   Availability: <input type="text" name="availability">
-  </div>
-  <div>
-   Duration: <input type="text" name="duration">
-  </div>
-  <div>
-   City: <input type="text" name="city">
-  </div>
-  <div>
-   State: <input type="text" name="state">
-  </div>
-  <div>
-   Zip Code: <input type="text" name="zip_code">
-  </div>
-  <div>
-   Monthly Rate: <input type="text" name="monthly_rate">
-  </div>
-  <div>
-   Mile Radius: <input type="text" name="radius">
-  </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="website_url" placeholder="Website">
+          </div>
 
-<h4> Account Info </h4>
-  <div>
-   Email: <input type="email" name="email">
-  </div>
-  <div>
-   Password: <input type="password" name="password">
-  </div>
-  <div>
-   Confirm Password: <input type="password" name="password_confirmation">
-  </div>
-  <input type="submit" value="Submit">
-<% end %>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="first_name" placeholder="First Name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+              </div>
+            </div>
+          </div>
 
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <div class="col">
+                <input type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation">
+              </div>
+            </div>
+          </div>
+
+          <legend class="form-header"> Ad Details </legend>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="availability" placeholder="Availability">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="monthly_rate" placeholder="$ Monthly Rate">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="city" placeholder="City">
+              </div>
+              <div class="col">
+                <select id="inputState" name="state" class="form-control">
+                  <option selected> State </option>
+                  <option>California</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="radius" placeholder="Mile Radius">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="image" placeholder="Image URL"> 
+              </div>
+              <div class="col">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col text-center"> 
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Register </button> 
+          </div>
+
+        </form>
+      </div>
+    </div>
+  <% end %>
+</body>

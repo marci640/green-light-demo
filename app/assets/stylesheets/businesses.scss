@@ -33,3 +33,20 @@
   width: 100%;
   height: 15vw;
 }
+
+.form-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.form-header{
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #6B7A8F;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px; 
+}

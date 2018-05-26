@@ -15,6 +15,16 @@
  */
 
 
+ .btn-primary { 
+  border-color: #F7C331; 
+  background-color: #F7C331;
+}
+ .btn-primary:hover { 
+  border-color: #F7C331;
+  color: #F7C331;
+  background-color: white; 
+}
+
  /*nav*/
  .topnav {
    overflow: hidden;
