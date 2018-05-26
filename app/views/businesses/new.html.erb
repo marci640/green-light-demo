@@ -1,102 +1,97 @@
-<body class="form-page">
-  <div class="row top-buffer"> </div>
+<%= form_tag '/businesses', method: :post do  %>
+  <div class="form-container">
+    <div class="col-lg-8 col-sm-12">
+      <form>
 
-  <%= form_tag '/businesses', method: :post do  %>
+        <legend class="form-header">Business & Contact Info </legend>
+        <div class="form-group">
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="business_name" placeholder="Business Name">
+        </div>
 
-    <div class="form-container">
-      <div class="col-lg-8 col-sm-12">
-        <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="website_url" placeholder="Website">
+        </div>
 
-          <legend class="form-header">Business & Contact Info </legend>
-          <div class="form-group">
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="business_name" placeholder="Business Name">
-          </div>
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="website_url" placeholder="Website">
-          </div>
-
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" name="first_name" placeholder="First Name">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" name="last_name" placeholder="Last Name">
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="first_name" placeholder="First Name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="last_name" placeholder="Last Name">
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email">
-          </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email">
+        </div>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="password" class="form-control" name="password" placeholder="Password">
-              </div>
-              <div class="col">
-                <input type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation">
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="col">
+              <input type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation">
             </div>
           </div>
+        </div>
 
-          <legend class="form-header"> Ad Details </legend>
+        <legend class="form-header"> Ad Details </legend>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" name="availability" placeholder="Availability">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" name="monthly_rate" placeholder="$ Monthly Rate">
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="availability" placeholder="Availability">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="monthly_rate" placeholder="$ Monthly Rate">
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" name="city" placeholder="City">
-              </div>
-              <div class="col">
-                <select id="inputState" name="state" class="form-control">
-                  <option selected> State </option>
-                  <option>California</option>
-                </select>
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="city" placeholder="City">
+            </div>
+            <div class="col">
+              <select id="inputState" name="state" class="form-control">
+                <option selected> State </option>
+                <option>California</option>
+              </select>
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" name="radius" placeholder="Mile Radius">
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="radius" placeholder="Mile Radius">
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" name="image" placeholder="Image URL"> 
-              </div>
-              <div class="col">
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="image" placeholder="Image URL"> 
+            </div>
+            <div class="col">
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
           </div>
-          
-          <div class="col text-center"> 
-            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Register </button> 
-          </div>
+        </div>
+        
+        <div class="col text-center"> 
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">Register </button> 
+        </div>
 
-        </form>
-      </div>
+      </form>
     </div>
-  <% end %>
-</body>
+  </div>
+<% end %>

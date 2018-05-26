@@ -1,65 +1,112 @@
-<h1>Signup!</h1>
-
-<h4> Driver Details </h4>
 <%= form_tag '/drivers', method: :post do  %>
-  <div>
-   First Name: <input type="text" name="first_name">
-  </div>
-  <div>
-   Last Name: <input type="text" name="last_name">
-  </div>
-  <div>
-   Phone Number: <input type="text" name="phone_number">
-  </div>
-  <div>
-   Street Address 1: <input type="text" name="street_address_1">
-  </div>
-  <div>
-   Street Address 2: <input type="text" name="street_address_2">
-  </div>
-  <div>
-   City: <input type="text" name="city">
-  </div>
-  <div>
-   State: <input type="text" name="state">
-  </div>
-  <div>
-   Zip Code: <input type="text" name="zip_code">
-  </div>
+  <div class="form-container">
+    <div class="col-lg-8 col-sm-12">
+      <form>
+        <legend class="form-header">Driver Info </legend>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" name="first_name" placeholder="First Name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+              </div>
+            </div>
+          </div>
 
-  <h4> Car Details: </h4>
-  <div>
-   Make: <input type="text" name="make">
+        <div class="form-group">
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="phone_number" placeholder="Phone Number">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" name="street_address_1" placeholder="Street Address">
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="street_address_2" placeholder="Apt #">
+            </div>
+            <div class="col">
+             <input type="text" class="form-control" name="city" placeholder="City">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <select id="inputState" name="state" class="form-control">
+                <option selected> State </option>
+                <option>California</option>
+              </select>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="zip_code" placeholder="Zip Code">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="col">
+              <input type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation">
+            </div>
+          </div>
+        </div>
+
+        <legend class="form-header"> Car Details </legend>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="make" placeholder="Make">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="model" placeholder="Model">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="year" placeholder="Year">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="mileage" placeholder="Mileage">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" name="car_image" placeholder="Car Image URL"> 
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="odometer_image" placeholder="Odometer Image URL"> 
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" name="license_plate_number" placeholder="License Plate #">
+        </div>
+        
+        <div class="col text-center"> 
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">Register </button> 
+        </div>
+
+      </form>
+    </div>
   </div>
-  <div>
-   Model: <input type="text" name="model">
-  </div>
-  <div>
-   Year: <input type="text" name="year">
-  </div>
-  <div>
-   Mileage: <input type="text" name="mileage">
-  </div>
-  <div>
-   Car Image: <input type="text" name="car_image">
-  </div>
-  <div>
-   Odometer Image: <input type="text" name="odometer_image">
-  </div>
-  <div>
-   License Plate Number: <input type="text" name="license_plate_number">
-  </div>
-  
-  <h4> Account Info </h4>
-  <div>
-   Email: <input type="email" name="email">
-  </div>
-  <div>
-   Password: <input type="password" name="password">
-  </div>
-  <div>
-   Confirm Password: <input type="password" name="password_confirmation">
-  </div>
-  <input type="submit" value="Submit">
 <% end %>
 

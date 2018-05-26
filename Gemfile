@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
 gem 'bootstrap', '~> 4.0.0.beta'
+gem "font-awesome-rails"
 gem 'react-rails'
 gem 'jquery-rails'
 gem 'faker'

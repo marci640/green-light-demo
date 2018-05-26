@@ -13,15 +13,17 @@
         <li class="list-group-item"> Mileage: <%= number_with_delimiter(@car.mileage.floor, :precision => 0, :delimiter => ',') %> </li>
       </ul>
     </div>
-
-    <div class="business-card" style="width: 25rem;">
-      <h5 class="card-title"> Current Ad </h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Company Name: <%=@business.business_name %> </li>
-        <li class="list-group-item"> Duration: <%=@ad.duration%> </li>
-        <li class="list-group-item"> Distance: Within <%=@ad.radius%> of <%=@ad.zip_code%> </li>
-      </ul>
-    </div>
+    
+    <% if @car.ad %>
+      <div class="business-card" style="width: 25rem;">
+        <h5 class="card-title"> Current Ad </h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Company Name: <%=@car.ad.business.business_name %> </li>
+          <li class="list-group-item"> Duration: <%=@car.ad.duration%> </li>
+          <li class="list-group-item"> Distance: Within <%=@car.ad.radius%> of <%=@car.ad.zip_code%> </li>
+        </ul>
+      </div>
+    <% end %>
 
   </div>
 
@@ -44,8 +46,9 @@
       </ul>
     </div>
 
-    <img src=<%=@ad.image%> alt="image of ad" class="img-thumbnail">
-
+    <% if @car.ad %>
+      <img src=<%=@car.ad.image%> alt="image of ad" class="img-thumbnail">
+    <% end %>
   </div>
 
 </div>
