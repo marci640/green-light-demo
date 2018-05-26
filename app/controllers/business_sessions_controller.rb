@@ -1,5 +1,5 @@
 class BusinessSessionsController < ApplicationController
-  
+    
   def new
     render 'new.html.erb'
   end

@@ -30,6 +30,13 @@
   content: "\f061";  
 }
 
+.center-me {
+  text-align:center;
+  width:100%;
+  display:block;
+  margin:auto;
+}
+
  /*nav*/
  .topnav {
    overflow: hidden;

@@ -8,22 +8,23 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <!-- nav bar -->
-  <div class="topnav" id="myTopnav">
-    <a href="/">Home </a>
-    <% if current_driver == nil %>
-      <a href="/driver_login"> Driver Login </a>
-      <a href="/driver_signup">Driver Signup</a>
-    <% else %>
-      <a href="/driver_logout">Driver Logout</a>
-    <% end %>
-    <% if current_business == nil %>
-      <a href="/business_login">Business Login</a>
-      <a href="/business_signup">Business Signup</a>
-    <% else %>
-      <a href="/business_logout">Business Logout</a>
-    <% end %>
-  </div>
+    <!-- nav bar --> 
+  <div class="topnav" id="myTopnav"> 
+    <a href="/">Home </a> 
+    <% if current_driver == nil %> 
+      <a href="/driver_login"> Driver Login </a> 
+      <a href="/driver_signup">Driver Signup</a> 
+    <% else %> 
+      <a href="/driver_logout">Driver Logout</a> 
+    <% end %> 
+    <% if current_business == nil %> 
+      <a href="/business_login">Business Login</a> 
+      <a href="/business_signup">Business Signup</a> 
+    <% else %> 
+      <a href="/business_logout">Business Logout</a> 
+    <% end %> 
+  </div> 
+
 
   <body>
     <% flash.each do |name, message| %>
