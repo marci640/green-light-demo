@@ -15,9 +15,27 @@
  *= require font-awesome
  */
 
+.btn-outline-warning {
+  border-color: #F7C331; 
+  background-color: white; 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #F7C331;
+  letter-spacing: 2px;
+  margin: 10px;
+  z-index: 700;
+}
+
+.btn-outline-warning:hover { 
+  border-color: #F7C331;
+  color: white;
+  background-color: #F7C331; 
+}
+
 .btn-primary { 
   border-color: #F7C331; 
   background-color: #F7C331;
+  letter-spacing: 2px;
 }
  .btn-primary:hover { 
   border-color: #F7C331;
@@ -27,7 +45,14 @@
 
 .btn-primary:hover::after {
   font-family: fontAwesome;
-  content: "\f061";  
+  content: "\f061";
+  padding-left: 5px;    
+}
+
+.btn-outline-warning:hover::after {
+  font-family: fontAwesome;
+  content: "\f061"; 
+  padding-left: 5px;  
 }
 
 .center-me {
