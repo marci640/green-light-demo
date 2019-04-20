@@ -9,7 +9,10 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
-gem 'bootstrap', '~> 4.0.0.beta'
+gem "bootstrap", ">= 4.3.1"
+gem "rack", ">= 2.0.6"
+gem "loofah", ">= 2.2.3"
+
 gem "font-awesome-rails"
 gem 'react-rails'
 gem 'jquery-rails'
