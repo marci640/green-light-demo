@@ -31,7 +31,8 @@
       
     </div>
     <div class="business-card" style="width: 25rem;">
-      <h5 class="card-title"> Current Cars <a class="edit-link" href="www.google.com"> edit </a> </h5>
+      <h5 class="card-title"> Current Cars  </h5>
+      <a href="/drivers" id="singlebutton" name="singlebutton" class="btn btn-primary" role="button">Add a Car</a>
       <% @cars.each do |car| %>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"> Make: <%=car.make%> </li>

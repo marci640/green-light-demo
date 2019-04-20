@@ -1,5 +1,14 @@
 class DriversController < ApplicationController
 
+  def index
+    @car_array = []
+    drivers = Driver.all
+    drivers.each do |driver|
+      @car_array.push(hash = { city: driver.city, id: driver.car.id, image: driver.car.car_image, make: driver.car.make, model: driver.car.model })
+    end
+    @current_driver = current_driver; 
+  end 
+
   def new
     render 'new.html.erb'
   end

@@ -7,7 +7,6 @@ class BusinessesController < ApplicationController
       @ad_array.push(hash = { business: business.business_name, id: business.ad.id, image: business.ad.image, monthly_rate: business.ad.monthly_rate})
     end
     @current_driver = current_driver; 
-
   end 
 
   def new
