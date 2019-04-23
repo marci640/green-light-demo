@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post "/driver_login" => "driver_sessions#create"
   get "/driver_logout" => "driver_sessions#destroy"
 
-  get "/businesses/index" => "businesses#index"
+  get "/businesses" => "businesses#index"
   get "/businesses/:id" => "businesses#show"
   get "/business_signup" => "businesses#new"
   post "/businesses" => "businesses#create"

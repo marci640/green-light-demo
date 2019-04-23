@@ -78,6 +78,14 @@
    font-size: 18px;
  }
 
+ .nav-item a {
+  color: #F7882F !important;
+ }
+
+ .navbar-brand{
+   color: #F7882F !important;
+ }
+
 .topnav a:hover {
   text-decoration: underline;
   font-size:1.2em;

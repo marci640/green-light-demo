@@ -8,37 +8,70 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-    <!-- nav bar --> 
-  <div class="topnav" id="myTopnav"> 
-    <a href="/">Home </a> 
-    <% if current_driver == nil %> 
-      <a href="/driver_login"> Driver Login </a> 
-      <a href="/driver_signup">Driver Signup</a> 
-    <% else %> 
-      <a href="/driver_logout">Driver Logout</a> 
-    <% end %> 
-    <% if current_business == nil %> 
-      <a href="/business_login">Business Login</a> 
-      <a href="/business_signup">Business Signup</a> 
-    <% else %> 
-      <a href="/business_logout">Business Logout</a> 
-    <% end %> 
-  </div> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="/">GreenLight</a>
 
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
 
-  <body>
-    <% flash.each do |name, message| %>
-      <div class="alert alert-<%=name%> alert-dismissible fade show" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"
-        <span aria-hidden="true">&times;</span>
-        </button>
-        <%= message %>
-      </div>
-    <% end %>
-  
-    <div class="container">
-      <%= yield %>
+        <% if current_driver == nil %> 
+          <li class="nav-item">
+            <a class="nav-link" href="/driver_login"> Driver Login </a> 
+          </li>
+        <% else %> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/businesses">See Available Ads</a>
+              <a class="dropdown-item" href="#">View/Edit Account </a>
+              <a class="dropdown-item" href="/driver_logout">Logout</a> 
+            </div>
+          </li>
+        <% end %>
+
+        <% if current_business == nil %> 
+          <li class="nav-item">
+            <a class="nav-link" href="/business_login">Business Login</a>
+          </li>
+        <% else %> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/drivers">See Available Cars</a>
+              <a class="dropdown-item" href="/businesses/5">View/Edit Account</a> 
+              <a class="dropdown-item" href="/business_logout">Logout</a> 
+            </div>
+          </li>
+        <% end %>
+      </ul>
+
     </div>
-  
-  </body>
+  </nav>
+
+  <% flash.each do |name, message| %>
+    <div class="alert alert-<%=name%> alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+      <span aria-hidden="true">&times;</span>
+      </button>
+      <%= message %>
+    </div>
+  <% end %>
+
+  <div class="container">
+    <body>
+      <%= yield %>  
+    </body>
+  </div>
 </html>
+
+
