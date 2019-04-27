@@ -47,15 +47,18 @@ ad_array.each_with_index do |ad, index|
   )
 end
 
-5.times do |i|
+car_array = ["https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", "https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", "https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", "https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"]
+
+car_array.each_with_index do |car, index|
   Car.create(
+    car_image: car,
     driver_id: i + 1,
     ad_id: i + 1,
     make: "Honda",
     model: "Civic",
     year: 2012,
     mileage: 60000,
-    car_image: "https://upload.wikimedia.org/wikipedia/commons/7/73/2012_Honda_Civic_EX_sedan_--_07-07-2011.jpg",
-    odometer_image: "https://upload.wikimedia.org/wikipedia/commons/6/61/Honda_FREED-HYBRID_SPEEDMETER.JPG"
+    odometer_image: "https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   )
-end 
+end
+

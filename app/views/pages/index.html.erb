@@ -1,11 +1,112 @@
-<style>
-  .topnav {
-    display: none !important;
-  }
-</style>
-
-<body class="background-pic">
+<!-- <body class="background-pic">
   
   <div class="top-buffer"> </div>
 
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <% content_for :header do %>
+  <!-- Header -->
+    <div class="container-fluid">
+    <header class="bg-primary mb-5">
+
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <h1 class="display-4 text-white mt-5 mb-2">Get paid during your commute</h1>
+            <p class="lead mb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus ab labore provident mollitia. </p>
+          </div>
+        </div>
+      
+    </header>
+    </div>
+  <% end %>
+
+  <br>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Promote Local Businesses</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+        <a class="btn btn-primary btn-lg" href="/driver_signup"> Sign-up to be a Driver </a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong>GreenLight</strong>
+          <br>3481 Melrose Place
+          <br>Beverly Hills, CA 90210
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">P:</abbr>
+          (123) 456-7890
+          <br>
+          <abbr title="Email">E:</abbr>
+          <a href="mailto:#">name@example.com</a>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-4 p-20 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://shortins.com/wp-content/uploads/2018/04/Small-Business-Insurance-in-Lubbock-TX-300x200.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Become a Business Partner</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/business_signup" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mb-3">
+      </div>
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="https://round-rock-locksmith.com/wp-content/uploads/2017/04/Car-Key-Replacement-300x200.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Become a Driver</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/driver_signup" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <% content_for :footer do %>
+    <footer class="py-5 bg-dark">
+      <div class="container-fluid">
+        <p class="m-0 text-center text-white">Copyright &copy; GreenLight 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  <% end %>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
+</html>

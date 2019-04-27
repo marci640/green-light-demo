@@ -21,7 +21,7 @@ class Driver extends React.Component {
                   <div className="card-body">
                     <h5 className="card-title">{car.make}</h5>
                     <p className="card-text">{car.model} </p>
-                   { this.state.current_driver && <a href={`/ads/${ad.id}`} className="btn btn-primary">Select Ad</a> } 
+                   <a href="#" className="btn btn-primary">Select Car </a> 
                   </div>
                 </div>
               </div>

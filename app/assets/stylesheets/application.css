@@ -15,6 +15,16 @@
  *= require font-awesome
  */
 
+
+ .top-buffer { 
+   margin-top:50px; 
+   padding-left: 20px;
+ }
+
+ body{
+     height: 100%
+ }
+
 .btn-outline-warning {
   border-color: #F7C331; 
   background-color: white; 
@@ -115,6 +125,7 @@
 
  .top-buffer { 
    margin-top:50px; 
+   padding-left: 15px;
  }
 
  .form-container {
@@ -133,3 +144,4 @@
    color: #fff;
    font-size: 20px; 
  }
+

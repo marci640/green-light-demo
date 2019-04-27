@@ -31,7 +31,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/businesses">See Available Ads</a>
-              <a class="dropdown-item" href="#">View/Edit Account </a>
+              <a class="dropdown-item" href="/drivers/<%=current_driver.id%>">View/Edit Account </a>
               <a class="dropdown-item" href="/driver_logout">Logout</a> 
             </div>
           </li>
@@ -48,7 +48,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/drivers">See Available Cars</a>
-              <a class="dropdown-item" href="/businesses/5">View/Edit Account</a> 
+              <a class="dropdown-item" href="/businesses/<%=current_business.id%>">View/Edit Account</a> 
               <a class="dropdown-item" href="/business_logout">Logout</a> 
             </div>
           </li>
@@ -67,11 +67,18 @@
     </div>
   <% end %>
 
+
+    <%= yield :header %>
+
+
   <div class="container">
     <body>
       <%= yield %>  
     </body>
   </div>
+
+  <%= yield :footer %>
+  
 </html>
 
 
